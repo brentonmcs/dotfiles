@@ -169,3 +169,72 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+
+function gitfeat()
+{
+	git fetch -p
+	git checkout master
+	git pull origin master
+	git checkout -b story/$1
+};
+
+function gitmast()
+{
+	branch_name="$(git symbolic-ref HEAD 2>/dev/null)" ||
+	branch_name="(unnamed branch)"     # detached HEAD
+
+	branch_name=${branch_name##refs/heads/}
+
+	if (( $branch_name == "master" || $branch_name == "(unnamed branch)"))
+       then echo "you are on master";
+	fi
+
+	git fetch -p
+	git checkout master
+	git pull origin master
+	git checkout $branch_name
+	git rebase master
+
+}
+
+function gitmm()
+{
+	branch_name="$(git symbolic-ref HEAD 2>/dev/null)" ||
+	branch_name="(unnamed branch)"     # detached HEAD
+
+	branch_name=${branch_name##refs/heads/}
+
+	if (( $branch_name == "master" || $branch_name == "(unnamed branch)"))
+       then echo "you are on master";
+	fi
+
+	git fetch -p
+	git checkout master
+	git pull origin master
+	git checkout $branch_name
+	git merge master
+}
+
+function gitrefresh()
+{
+	branch_name="$(git symbolic-ref HEAD 2>/dev/null)" ||
+	branch_name="(unnamed branch)"     # detached HEAD
+
+	branch_name=${branch_name##refs/heads/}
+
+	git stash
+	git pull origin $branch_name
+	git stash pop
+}
+
+function gitpush()
+{
+	branch_name="$(git symbolic-ref HEAD 2>/dev/null)" ||
+	branch_name="(unnamed branch)"     # detached HEAD
+
+	branch_name=${branch_name##refs/heads/}
+
+	git push origin $branch_name
+	git pr create --auto-complete
+}
