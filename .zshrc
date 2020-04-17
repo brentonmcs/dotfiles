@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 export GOPATH=$HOME/go
 
@@ -17,7 +24,8 @@ export ASPNETCORE_ENVIRONMENT="Production"
 
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="muse"
+# ZSH_THEME="muse"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 alias ls='lsd'
 alias l='ls -l'
@@ -105,18 +113,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias dr="dotnet run"
-alias gs="git status"
-alias grc="git rebase --continue"
-alias grs="git rebase --skip"
-
-alias betting="code ~/source/Betting/daily-bet-listener/"
-alias betdeploy="cd ~/source/Betting/daily-bet-listener/build && ./deploy.sh arn:aws:sns:ap-southeast-2:007460876082:dailybettip arn:aws:sns:ap-southeast-2:007460876082:earlyoddsboosttip arn:aws:sns:us-west-2:333344425536:gold-tips brenton.mcsweyn@gmail.com +61411153006"
-
 
 if [  ]; then source <(kubectl completion zsh); fi
 
 source ".functions"
+source ".aliases"
 
 export EDITOR='nano'
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

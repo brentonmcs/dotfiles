@@ -1,0 +1,77 @@
+cask_args appdir: "/Applications"
+brew "mas"
+
+mas "Fantastical", id: 435003921
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Slack", id: 803453959
+mas "Tweetbot", id: 1384080005
+
+tap "azure/draft"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "buo/cask-upgrade"
+
+cask "1Password"
+cask "appcleaner"
+cask "aerial"
+cask "alfred"
+cask 'bartender'
+cask "keepingyouawake"
+cask "dotnet-sdk"
+cask 'dropbox'
+cask "font-fira-code"
+cask "font-hack-nerd-font"
+cask "google-cloud-sdk"
+cask "google-chrome"
+cask "iina"
+cask "iterm2"
+cask "istat-menus"
+cask "rocket"
+cask 'rider'
+cask "powershell"
+cask "tripmode"
+cask "visual-studio-code"
+cask 'zoomus'
+cask "the-unarchiver"
+cask 'transmission'
+cask 'charles'
+cask 'postman'
+cask 'encryptme'
+
+brew "python"
+brew "awscli"
+brew "azure-cli"
+brew "glib"
+brew "openssl"
+brew "cairo"
+brew "cmake"
+brew "go"
+brew "dep"
+brew "docker", link: false
+brew "docker-compose", link: false
+brew "ext4fuse"
+brew 'git'
+brew 'git-extras'
+brew "inetutils"
+brew "jq"
+brew "kompose"
+brew "kubernetes-cli"
+brew "kubernetes-helm"
+brew "libevent"
+brew "lsd"
+brew "python@2"
+brew "mupdf"
+brew "mupdf-tools", link: false
+brew "node"
+brew "pipenv"
+brew "poppler"
+brew "redis"
+brew "topgrade"
+brew "wget"
+brew "zsh"
+
+brew 'nano'
