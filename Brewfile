@@ -101,3 +101,4 @@ cask 'transmission'
 cask "zoomus"
 cask "visual-studio-code"
 brew 'nano'
+brew "zsh-syntax-highlighting"

@@ -1,5 +1,4 @@
-# Compiled Python files
-*.pyc
+.vscode
 
 # Folder view configuration files
 .DS_Store
