@@ -24,10 +24,8 @@ mas "Pages", id: 409201541
 mas "PiPifier", id: 1160374471
 mas "Raindrop.io for Safari", id: 957810159
 mas "Reeder", id: 1449412482
-mas "Reeder", id: 880001334
 mas "Slack", id: 803453959
 mas "The Unarchiver", id: 425424353
-mas "Todoist", id: 585829637
 mas "Tot", id: 1491071483
 mas "Tweetbot", id: 1384080005
 mas "Twitter", id: 1482454543
@@ -41,7 +39,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "isen-ng/dotnet-sdk-versions"
-tap "microsoft/mssql-release"
 cask "osxfuse"
 cask "xquartz"
 brew "awscli"
@@ -64,6 +61,7 @@ brew "kompose"
 brew "kubernetes-cli"
 brew "libevent"
 brew "lsd"
+brew "bat"
 brew "mas"
 brew "nano"
 brew "node"
@@ -91,7 +89,6 @@ cask "font-hack-nerd-font"
 cask "google-cloud-sdk"
 cask "iina"
 cask "keepingyouawake"
-cask "minikube"
 cask "mysql-shell"
 cask "postman"
 cask "powershell"
@@ -102,3 +99,6 @@ cask "zoomus"
 cask "visual-studio-code"
 brew 'nano'
 brew "zsh-syntax-highlighting"
+cask "expressvpn"
+cask "dash"
+
