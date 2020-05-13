@@ -92,7 +92,8 @@ cask "keepingyouawake"
 cask "mysql-shell"
 cask "postman"
 cask "powershell"
-cask "rider"
+cask "jetbrains-toolbox"
+cask "rider", args: { appdir: "~/Applications/JetBrains\ Toolbox/" }
 cask "rocket"
 cask 'transmission'
 cask "zoomus"
