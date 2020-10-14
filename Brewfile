@@ -81,6 +81,7 @@ brew "bradleyjkemp/formulae/grpc-tools"
 
 cask "aerial"
 cask "appcleaner"
+cask "azure-data-studio"
 cask "bitbar"
 cask "brave-browser"
 cask "caffeine"
